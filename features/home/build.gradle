@@ -1,0 +1,7 @@
+apply plugin: 'com.android.library'
+apply from: '../../android_feature_dependencies.gradle'
+
+dependencies {
+    implementation "androidx.appcompat:appcompat:${Versions.appcompat}"
+    implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:${Versions.brvah}"
+}

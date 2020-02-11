@@ -1,0 +1,31 @@
+/**
+ * Feature dependencies
+ */
+apply plugin: 'com.android.library'
+apply from: '../../android_commons.gradle'
+apply from: '../../android_core_dependencies.gradle'
+apply plugin: 'kotlin-kapt'
+
+android {
+
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    implementation project(Modules.common)
+    implementation project(Modules.remote)
+    implementation project(Modules.local)
+    implementation project(Modules.model)
+    // KOIN (Because each feature has to handle its dependencies)
+    implementation "org.koin:koin-androidx-scope:${Versions.koin}"
+    implementation "org.koin:koin-androidx-viewmodel:${Versions.koin}"
+
+    implementation "io.coil-kt:coil:${Versions.coil}"
+    // TEST
+    testImplementation "junit:junit:${Versions.junit}"
+    testImplementation "org.koin:koin-test:${Versions.koin}"
+    androidTestImplementation "androidx.test.ext:junit:${Versions.junit_android}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${Versions.espresso}"
+}

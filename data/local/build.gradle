@@ -1,0 +1,14 @@
+apply plugin: 'com.android.library'
+apply from: '../../android_commons.gradle'
+
+dependencies {
+    // DATA MODULE
+    implementation project(Modules.model)
+    // Moshi
+//    implementation "com.squareup.moshi:moshi:${Versions.moshi}"
+//    implementation "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
+    implementation "com.google.code.gson:gson:${Versions.gson}"
+    // KOIN
+    implementation "org.koin:koin-androidx-scope:${Versions.koin}"
+    implementation "org.koin:koin-androidx-viewmodel:${Versions.koin}"
+}

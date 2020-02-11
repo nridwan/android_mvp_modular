@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+apply from: '../android_commons.gradle'
+
+android {
+    defaultConfig {
+        applicationId "com.boilerplate.modular"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(Modules.remote)
+    implementation project(Modules.local)
+    implementation project(Modules.common)
+    implementation project(':features:home')
+    // KOIN
+    implementation "org.koin:koin-androidx-scope:${Versions.koin}"
+    implementation "org.koin:koin-androidx-viewmodel:${Versions.koin}"
+    // ANDROID
+    implementation "androidx.appcompat:appcompat:${Versions.appcompat}"
+}

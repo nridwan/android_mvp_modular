@@ -1,0 +1,15 @@
+/**
+ * Shared dependencies between modules
+ */
+dependencies {
+    // KOTLIN
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutine}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutine}"
+    // ANDROID
+    implementation "androidx.appcompat:appcompat:${Versions.appcompat}"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swiperefresh}"
+    implementation "androidx.core:core-ktx:${Versions.ktx}"
+    implementation "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
+    implementation "androidx.recyclerview:recyclerview:${Versions.recyclerview}"
+}

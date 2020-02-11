@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+apply from: '../../android_commons.gradle'
+
+dependencies {
+    //MOSHI
+//    implementation "com.squareup.moshi:moshi:${Versions.moshi}"
+//    implementation "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
+    implementation "com.google.code.gson:gson:${Versions.gson}"
+    // NETWORK
+    implementation "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${Versions.retrofit_gson}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${Versions.okthttp_logging}"
+    // DATA MODULE
+    implementation project(Modules.local)
+    implementation project(Modules.model)
+    // KOIN
+    implementation "org.koin:koin-androidx-scope:${Versions.koin}"
+    implementation "org.koin:koin-androidx-viewmodel:${Versions.koin}"
+}

@@ -1,0 +1,2 @@
+include ':app', ':data:remote', ':data:model', ':data:local', ':common', ':features:home'
+rootProject.name='Modular'

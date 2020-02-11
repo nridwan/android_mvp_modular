@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+apply from: '../android_commons.gradle'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation project(Modules.local)
+    implementation project(Modules.model)
+    implementation "androidx.appcompat:appcompat:${Versions.appcompat}"
+    implementation "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
+    implementation "io.coil-kt:coil:${Versions.coil}"
+    //Rxjava
+    implementation "io.reactivex.rxjava2:rxandroid:${Versions.rxandroid}"
+    implementation "io.reactivex.rxjava2:rxjava:${Versions.rxjava}"
+    implementation "io.reactivex.rxjava2:rxkotlin:${Versions.rxkotlin}"
+}
